@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+.home img {
+  height: 749px;
+  width: 100%;
+
+  object-position: center;
+  object-fit: cover;
+  margin-top: -25px;
+}
+
+.homecontent {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translate(-50%, -50%);
+}
+
+.homecontent h1 {
+  color: #fff;
+  font-size: 30px;
+  line-height: normal;
+  margin-left: 59%;
+  font-size: -webkit-xxx-large;
+  font-weight: 700;
+  white-space: break-spaces;
+  letter-spacing: 3px;
+  font-family: "Anton", sans-serif;
+  text-transform: uppercase;
+}
+
+.smallhead {
+  margin: 117px 0px 0px 71px;
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  /* transform: translate(-50%, -50%); */
+  color: white;
+  font-size: 30px;
+  line-height: normal;
+  margin-left: 20% 30% 30% 30%;
+  font-size: small;
+  white-space: break-spaces;
+  letter-spacing: 2px;
+  font-family: inherit;
+  /* text-transform: uppercase; */
+  font-size: inherit;
+
+  // position: absolute;
+  // top: 50%;
+  // left: 40px;
+  // transform: translate(-50%, -50%);
+  // color: rgb(255, 0, 0);
+  // font-size: 30px;
+  // line-height: normal;
+  // margin-left: 20% 30% 30% 30%;
+  // font-size: small;
+  // font-weight: 700;
+  // white-space: break-spaces;
+  // letter-spacing: 3px;
+  // font-family: "Anton", sans-serif;
+  // text-transform: uppercase;
+}

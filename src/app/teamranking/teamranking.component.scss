@@ -1,0 +1,17 @@
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+  color: rgb(233, 221, 221);
+  cursor: default;
+  background-color: rgb(12, 104, 58);
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+}
+
+.teamRankingHeading {
+  font-size: -webkit-xxx-large;
+  margin-bottom: 70px;
+  font-family: fantasy;
+  letter-spacing: 1px;
+  color: #295829;
+}

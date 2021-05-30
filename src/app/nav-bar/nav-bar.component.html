@@ -1,0 +1,103 @@
+<!-- <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button
+        type="button"
+        class="navbar-toggle"
+        data-toggle="collapse"
+        data-target="#myNavbar"
+      >
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" class="nav_links" routerLink="">RTVC</a>
+    </div>
+    <div class="collapse navbar-collapse d-flex" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right d-flex">
+        <li><a class="nav_links" routerLink="">Home</a></li>
+        <li><a class="nav_links" routerLink="teamranking">Team Ranking</a></li>
+        <li><a class="nav_links" routerLink="news">News</a></li>
+        <li><a class="nav_links" routerLink="about">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button
+        type="button"
+        class="navbar-toggle"
+        data-toggle="collapse"
+        data-target="#myNavbar"
+      >
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="#" class="navbar-brand">
+        <!-- Logo Image -->
+        <img
+          src="https://res.cloudinary.com/mhmd/image/upload/v1557368579/logo_iqjuay.png"
+          width="45"
+          alt=""
+          class="d-inline-block align-middle mr-2"
+        />
+        <!-- Logo Text -->
+        <span class="text-uppercase font-weight-bold">RTVC</span>
+      </a>
+
+      <!-- <a class="navbar-brand" href="#">RTVC</a> -->
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a class="nav_links" routerLink="">Home</a></li>
+        <li>
+          <a
+            class="nav_links"
+            routerLink="teamranking"
+            *ngIf="userDetail !== ''"
+            >Team Ranking</a
+          >
+        </li>
+        <li>
+          <a class="nav_links" routerLink="news" *ngIf="userDetail !== ''"
+            >News</a
+          >
+        </li>
+        <li>
+          <a class="nav_links" routerLink="commentry">Live Commentary</a>
+        </li>
+
+        <li><a class="nav_links" routerLink="about">About</a></li>
+
+        <!-- <li class="active"><a href="#">Home</a></li>
+
+        <li><a href="#">Page 1</a></li>
+
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li> -->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li>Welcome {{ email }}</li> -->
+        <li *ngIf="userDetail === ''">
+          <a class="nav_links" routerLink="signup"
+            ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+          >
+        </li>
+        <li *ngIf="userDetail === ''">
+          <a class="nav_links" routerLink="login"
+            ><span class="glyphicon glyphicon-log-in"></span> Login</a
+          >
+        </li>
+        <li *ngIf="userDetail !== ''">
+          <a class="nav_links" (click)="logout()">
+            <span class="glyphicon glyphicon-log-in"></span> Logout
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

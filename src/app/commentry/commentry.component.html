@@ -1,0 +1,11 @@
+<h2>{{ this.Match[0].team1 }} VS {{ this.Match[0].team2 }}</h2>
+<div class="card">
+  <div class="card-body">
+    Score : {{ this.Match[0].team1 }} {{ this.Match[0].score }} -
+    {{ this.Match[0].wickets }}
+  </div>
+
+  <div class="card-body">
+    {{ this.myDate | date: "mediumDate" }}
+  </div>
+</div>
