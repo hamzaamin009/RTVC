@@ -1,0 +1,42 @@
+// .example-card {
+//   max-width: 400px;
+// }
+
+// .example-header-image {
+//   // background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+//   background-size: cover;
+// }
+
+.scoreCard {
+  margin-left: 20px;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-family: fantasy;
+}
+
+#commentry {
+  background-color: rgb(250, 250, 250);
+  width: 100%;
+  margin: 0px;
+  //   height: 100%;
+  .cards {
+    display: flex;
+    flex-direction: row;
+    .mainCard {
+      background: #3c763d;
+      color: ghostwhite;
+      max-width: 500px;
+      margin: 20px;
+      padding: 30px;
+
+      mat-card-content {
+        padding-left: 17px;
+      }
+
+      mat-card-footer {
+        padding-left: 30px;
+      }
+    }
+  }
+}

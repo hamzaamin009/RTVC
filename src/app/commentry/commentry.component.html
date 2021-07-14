@@ -1,11 +1,26 @@
-<h2>{{ this.Match[0].team1 }} VS {{ this.Match[0].team2 }}</h2>
-<div class="card">
-  <div class="card-body">
-    Score : {{ this.Match[0].team1 }} {{ this.Match[0].score }} -
-    {{ this.Match[0].wickets }}
-  </div>
+<div>
+  <h2 class="scoreCard">Score Card</h2>
+  <div id="commentry">
+    <div class="commentryCards" *ngFor="let commentry of matchCommentry">
+      <div class="cards">
+        <mat-card class="mainCard">
+          <mat-card-header>
+            <mat-card-title
+              >{{ commentry.team1 }} VS {{ commentry.team2 }}</mat-card-title
+            >
+          </mat-card-header>
+          <mat-card-content>
+            <p>
+              Score : {{ commentry.team1 }} {{ commentry.score }} /
+              {{ commentry.wickets }}
+            </p>
+          </mat-card-content>
 
-  <div class="card-body">
-    {{ this.myDate | date: "mediumDate" }}
+          <mat-card-footer>
+            {{ commentry.Date.toDate() }}
+          </mat-card-footer>
+        </mat-card>
+      </div>
+    </div>
   </div>
 </div>

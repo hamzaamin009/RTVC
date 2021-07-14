@@ -9,6 +9,7 @@ import { ResetpasswordComponent } from './resetpassword/resetpassword.component'
 import { SignupComponent } from './signup/signup.component';
 import { TeamrankingComponent } from './teamranking/teamranking.component';
 import { CommentryComponent } from './commentry/commentry.component';
+import { UpcomingmatchesComponent } from './upcomingmatches/upcomingmatches.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'news', component: NewsComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'login/resetpassword', component: ResetpasswordComponent },
   { path: 'commentry', component: CommentryComponent },
+  { path: 'upcomingmatches', component: UpcomingmatchesComponent },
 ];
 
 @NgModule({

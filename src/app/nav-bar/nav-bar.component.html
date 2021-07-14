@@ -40,7 +40,7 @@
       <a href="#" class="navbar-brand">
         <!-- Logo Image -->
         <img
-          src="https://res.cloudinary.com/mhmd/image/upload/v1557368579/logo_iqjuay.png"
+          src="https://www.graphicsprings.com/filestorage/stencils/4e998e68a2323649ee78e08201b46b26.png?width=500&height=500"
           width="45"
           alt=""
           class="d-inline-block align-middle mr-2"
@@ -71,14 +71,16 @@
           <a class="nav_links" routerLink="commentry">Live Commentary</a>
         </li>
 
+        <li>
+          <a
+            class="nav_links"
+            routerLink="upcomingmatches"
+            *ngIf="userDetail !== ''"
+            >Upcoming Matches</a
+          >
+        </li>
+
         <li><a class="nav_links" routerLink="about">About</a></li>
-
-        <!-- <li class="active"><a href="#">Home</a></li>
-
-        <li><a href="#">Page 1</a></li>
-
-        <li><a href="#">Page 2</a></li>
-        <li><a href="#">Page 3</a></li> -->
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <!-- <li>Welcome {{ email }}</li> -->

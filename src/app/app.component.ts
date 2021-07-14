@@ -17,6 +17,9 @@ export class AppComponent {
 
   ngOnit() {
     //this.email = localStorage.getItem('email');
+
+    let userDetail = localStorage.getItem('uid');
+    console.log('userDetails are : ' + userDetail);
   }
 
   ngOnChanges(changes: SimpleChange): void {

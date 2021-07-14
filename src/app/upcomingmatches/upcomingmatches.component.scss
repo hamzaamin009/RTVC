@@ -1,0 +1,62 @@
+// .example-card {
+//   max-width: 400px;
+// }
+
+// .example-header-image {
+//   background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+//   background-size: cover;
+// }
+
+// .example-card {
+//   max-width: 400px;
+// }
+
+// .example-header-image {
+//   // background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+//   background-size: cover;
+// }
+
+.latestNews {
+  font-size: 40px;
+  margin-bottom: 40px;
+  font-family: fantasy;
+  letter-spacing: 1px;
+  color: #295829;
+  margin-left: 36%;
+}
+
+#commentry {
+  background-color: rgb(234, 239, 243);
+  width: 100%;
+  margin: 0px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+
+  // height: 250px;
+  //   height: 100%;
+  .cards {
+    // display: flex;
+    // flex-direction: row;
+    width: 100%;
+
+    .mainCard {
+      background: #3c763d;
+      color: ghostwhite;
+      max-width: 500px;
+      margin: 20px;
+      padding: 30px;
+      // margin-left: 32%;
+
+      mat-card-content {
+        padding-left: 17px;
+      }
+
+      mat-card-footer {
+        padding-left: 30px;
+      }
+    }
+  }
+}

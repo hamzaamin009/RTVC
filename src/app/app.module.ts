@@ -28,6 +28,8 @@ import {
 import { AdminComponent } from './admin/admin.component';
 import { CommentryComponent } from './commentry/commentry.component';
 import { UpcomingmatchesComponent } from './upcomingmatches/upcomingmatches.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -51,8 +53,9 @@ import { UpcomingmatchesComponent } from './upcomingmatches/upcomingmatches.comp
     AngularFirestoreModule,
     AngularFireAuthModule,
     ReactiveFormsModule,
-
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

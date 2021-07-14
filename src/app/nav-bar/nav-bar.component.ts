@@ -21,11 +21,18 @@ export class NavBarComponent implements OnInit {
   ngOnInit() {
     //  this.email = localStorage.getItem('email');
     this.userDetail = localStorage.getItem('uid');
+    // console.log('userDetails are : ' + this.userDetail);
+    if (this.userDetail === null) {
+      // console.log('oho null');
+      // this.router.navigate(['']);
+      // this.authService.logoutUser();
+      this.logout();
+    }
   }
 
   ngOnChanges(changes: SimpleChange): void {
     console.log(changes);
-    debugger;
+    // debugger;
   }
 
   logout() {

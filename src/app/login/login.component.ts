@@ -20,7 +20,6 @@ import { AngularFireAuth } from 'angularfire2/auth';
 })
 export class LoginComponent implements OnInit {
   userinfo: string;
-
   // loggedIn: boolean = false;
 
   constructor(
@@ -97,6 +96,8 @@ export class LoginComponent implements OnInit {
         // });
         this.errorMessage = '';
         // this.navCtrl.navigateForward('/main');
+        // this.location.reload()
+        location.reload();
       },
       (err) => {
         this.errorMessage = err.message;
