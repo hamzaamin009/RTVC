@@ -10,6 +10,7 @@ import { SignupComponent } from './signup/signup.component';
 import { TeamrankingComponent } from './teamranking/teamranking.component';
 import { CommentryComponent } from './commentry/commentry.component';
 import { UpcomingmatchesComponent } from './upcomingmatches/upcomingmatches.component';
+import { AdminComponent } from './admin/admin.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'news', component: NewsComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'login/resetpassword', component: ResetpasswordComponent },
   { path: 'commentry', component: CommentryComponent },
   { path: 'upcomingmatches', component: UpcomingmatchesComponent },
+  { path: 'admin', component:AdminComponent}
 ];
 
 @NgModule({

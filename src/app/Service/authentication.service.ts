@@ -62,13 +62,10 @@ export class AuthenticationService {
         .signInWithEmailAndPassword(value.email, value.password)
         .then(
           (res) => {
-            // debugger;
             console.log('res', res);
-            const uid = res.user.uid;
-            resolve(res);
-            localStorage.setItem('uid', uid);
 
-            localStorage.setItem('email', res.user.email);
+            resolve(res);
+
           },
           (err) => reject(err)
         );
@@ -81,11 +78,8 @@ export class AuthenticationService {
         this.afAuth.auth
           .signOut()
           .then(() => {
-            console.log('LOG Out');
-            // resolve();
-            localStorage.removeItem('email');
-            localStorage.removeItem('uid');
-            this.router.navigate(['']);
+            localStorage.removeItem('userDetail');
+            this.router.navigate([''])
           })
           .catch((error) => {
             reject();

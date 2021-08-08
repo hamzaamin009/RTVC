@@ -23,7 +23,7 @@ export class CommentryComponent implements OnInit {
         // console.log(this.Match);
         this.matchCommentry = matchCommentry.map((commentry) => {
           const commentryData = commentry.payload.doc.data();
-          console.log(commentryData);
+          // console.log(commentryData);
           return commentryData;
         });
       });

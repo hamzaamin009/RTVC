@@ -7,19 +7,14 @@ import { AngularFireAuth } from 'angularfire2/auth';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  //email: string;
-  // courses: [];
-  // email = 'teest@gmail.com';
-  // password = 'Test@123';
-
+  userDetail: any
   @Input() loggedIn: boolean;
   constructor(private afAuth: AngularFireAuth, private afs: AngularFirestore) {}
 
   ngOnit() {
-    //this.email = localStorage.getItem('email');
-
-    let userDetail = localStorage.getItem('uid');
-    console.log('userDetails are : ' + userDetail);
+    
+    this.userDetail = localStorage.getItem('userDetail');
+    console.log('userDetails are : ' + this.userDetail);
   }
 
   ngOnChanges(changes: SimpleChange): void {

@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class NavBarComponent implements OnInit {
   // @Input() loggedIn: boolean = false;
 
-  userDetail: string;
+  userDetail: any;
   // email;
 
   constructor(
@@ -19,14 +19,13 @@ export class NavBarComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    //  this.email = localStorage.getItem('email');
-    this.userDetail = localStorage.getItem('uid');
-    // console.log('userDetails are : ' + this.userDetail);
+    this.userDetail = localStorage.getItem('userDetail');
+    
     if (this.userDetail === null) {
-      // console.log('oho null');
-      // this.router.navigate(['']);
-      // this.authService.logoutUser();
       this.logout();
+    } else {
+      this.userDetail = JSON.parse(this.userDetail)
+      console.log(this.userDetail.type)
     }
   }
 

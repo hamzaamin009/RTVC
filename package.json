@@ -21,8 +21,12 @@
     "@angular/platform-browser": "~11.2.10",
     "@angular/platform-browser-dynamic": "~11.2.10",
     "@angular/router": "~11.2.10",
+    "@google-cloud/speech": "^4.5.5",
     "angularfire2": "^5.4.2",
+    "axios": "^0.21.1",
+    "cricapi": "^1.2.9",
     "firebase": "^7.24.0",
+    "node-cricapi": "^1.2.6",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"

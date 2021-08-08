@@ -15,11 +15,9 @@ export class NewsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.userDetail = localStorage.getItem('uid');
+    this.userDetail = localStorage.getItem('userDetail');
     if (this.userDetail === null) {
-      // console.log('oho null');
-      // this.router.navigate(['']);
-      // this.authService.logoutUser();
+      
       this.logout();
     }
   }

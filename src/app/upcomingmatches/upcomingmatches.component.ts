@@ -20,12 +20,8 @@ export class UpcomingmatchesComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.userDetail = localStorage.getItem('uid');
-    // console.log('userDetails are : ' + this.userDetail);
+    this.userDetail = localStorage.getItem('userDetail');
     if (this.userDetail === null) {
-      // console.log('oho null');
-      // this.router.navigate(['']);
-      // this.authService.logoutUser();
       this.logout();
     } else {
       this.afs

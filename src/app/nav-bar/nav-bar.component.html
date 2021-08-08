@@ -80,6 +80,16 @@
           >
         </li>
 
+
+        <li>
+          <a
+            class="nav_links"
+            routerLink="admin"
+            *ngIf="userDetail !== '' && userDetail.type == 'admin' "
+            >Convert Commentary</a
+          >
+        </li>
+
         <li><a class="nav_links" routerLink="about">About</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">

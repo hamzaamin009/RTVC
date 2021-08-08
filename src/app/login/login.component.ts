@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
   };
 
   ngOnInit() {
-    this.userinfo = localStorage.getItem('email');
+    this.userinfo = localStorage.getItem('userDetail');
     if (this.userinfo != null) {
       this.router.navigate(['']);
     }
@@ -77,30 +77,28 @@ export class LoginComponent implements OnInit {
     this.validations_form.reset();
     this.authService.loginUser(value).then(
       (res) => {
-        // this.authService.getUserIDAsync().then((user) => {
-        // this.afs
-        //   .collection('users', (ref) => ref.where('email', '==', user.email))
-        //   .valueChanges()
-        //   .subscribe((users) => {
-        // tslint:disable-next-line: no-shadowed-variable
-        // const userinfo: any = users[0];
-        // if (userinfo.type === 'admin') {
-        this.router.navigate(['/']);
-        // this.loggedIn = true;
-        // } else if (userinfo.type === 'User') {
-        //   this.router.navigate['/home'];
-        // } else {
-        //   this.router.navigate['/home'];
-        // }
-        //});
-        // });
-        this.errorMessage = '';
-        // this.navCtrl.navigateForward('/main');
-        // this.location.reload()
-        location.reload();
+        this.authService.getUserIDAsync().then((user) => {
+          this.afs
+            .collection('users', (ref) => ref.where('email', '==', user.email))
+            .valueChanges()
+            .subscribe((users) => {
+              // tslint:disable-next-line: no-shadowed-variable
+              const userinfo: any = users[0];
+              localStorage.setItem('userDetail', JSON.stringify(userinfo));
+              // debugger;
+              // if (userinfo.type === 'admin') {
+              // this.router.navigate(['/']);
+              // } else {
+              this.router.navigate['/'];
+              // }
+              this.errorMessage = '';
+              location.reload();
+            });
+        });
       },
       (err) => {
         this.errorMessage = err.message;
+        console.log(this.errorMessage);
         setTimeout(() => {
           this.errorMessage = '';
         }, 4000);
